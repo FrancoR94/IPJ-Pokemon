@@ -28,7 +28,6 @@ class Menu
             Console.WriteLine(line);
             Thread.Sleep(50);
         }
-        Console.ReadLine();
     }
 }
 
