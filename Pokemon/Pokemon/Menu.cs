@@ -9,7 +9,7 @@ class Menu
 {
     public Menu()
     {
-        string[] lines = File.ReadAllLines("Bienvenida.txt");
+        string[] lines = File.ReadAllLines("Mensajes/Bienvenida.txt");
         foreach (string line in lines)
         {
             Console.WriteLine(line);
@@ -22,7 +22,7 @@ class Menu
     }
     public static void MainMenu()
     {
-        string[] lines = File.ReadAllLines("MenuPrincipal.txt");
+        string[] lines = File.ReadAllLines("Mensajes/MenuPrincipal.txt");
         foreach (string line in lines)
         {
             Console.WriteLine(line);
