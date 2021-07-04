@@ -28,6 +28,7 @@ class GamePlay
         {
             case MenuSelection.Start:
                 Player player = new Player();
+                
                 break;
             case MenuSelection.Exit:
                 Console.Clear();

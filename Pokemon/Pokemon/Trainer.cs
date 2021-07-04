@@ -8,6 +8,7 @@ class Trainer
     public Trainer()
     {
         string name;
+        List<Pokemon> pokemon;
     }
 }
 
