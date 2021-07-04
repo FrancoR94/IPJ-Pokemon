@@ -9,6 +9,10 @@ class Menu
 {
     public Menu()
     {
+        
+    }
+    public void Welcome()
+    {
         string[] lines = File.ReadAllLines("Mensajes/Bienvenida.txt");
         foreach (string line in lines)
         {
@@ -18,11 +22,20 @@ class Menu
         Console.WriteLine("Press ENTER to start...");
         Console.ReadLine();
         Console.Clear();
-        MainMenu();
     }
-    public static void MainMenu()
+    public void MainMenu()
     {
+        Welcome();
         string[] lines = File.ReadAllLines("Mensajes/MenuPrincipal.txt");
+        foreach (string line in lines)
+        {
+            Console.WriteLine(line);
+            Thread.Sleep(50);
+        }
+    }
+    public void PauseMenu()
+    {
+        string[] lines = File.ReadAllLines("Mensajes/MenuPausa.txt");
         foreach (string line in lines)
         {
             Console.WriteLine(line);

@@ -5,20 +5,54 @@ using System.IO;
 using System.Threading;
 
 
-public class Game
+class Game
 {
-    public Game()
+    private static Game instance;
+    
+    public static Game GetInstence()
     {
-        GamePlay gamePlay = new GamePlay();
-    }
-    public static bool GameStart()
-    {
-        string[] lines = File.ReadAllLines("Mensajes/Final.txt");
-        foreach (string line in lines)
+        if (instance == null)
         {
-            Console.WriteLine(line);
-            Thread.Sleep(100);
+            instance = new Game();
         }
-        return false;
+        return instance;
+    }
+    enum State { GamePlay, Menu, Pause };
+    private Menu menu;
+    private GamePlay gamePlay;
+    private static State state;
+    private Game()
+    {
+        menu = new Menu();
+        gamePlay = new GamePlay();
+        state = State.Menu;
+    }
+    public bool GameStart()
+    {
+        
+        switch (state)
+        {
+            case State.GamePlay:
+                gamePlay.Gameplay();
+                break;
+            case State.Menu:
+                menu.MainMenu();
+                state = State.GamePlay;
+                break;
+            case State.Pause:
+                menu.PauseMenu();
+                break;
+        }
+        return true;
+        
+    }
+    public void GoToPause()
+    {
+        state = State.Pause;
+    }
+
+    public void GoToGameplay()
+    {
+        state = State.GamePlay;
     }
 }

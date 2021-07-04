@@ -5,11 +5,11 @@
     {
         static void Main(string[] args)
         {
-            Game game = new Game();
+            Game game = Game.GetInstence();
             bool gameOpen = true;
             do
             {
-            gameOpen = Game.GameStart();
+            gameOpen = game.GameStart();
             } while (gameOpen);
         }
     }

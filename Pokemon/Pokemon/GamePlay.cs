@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.IO;
+using System.Threading;
 
 
 class GamePlay
@@ -8,8 +10,7 @@ class GamePlay
     enum MenuSelection { Start = 1, Exit, Error };
     public GamePlay()
     {
-        Menu menu = new Menu();
-        Gameplay();
+        
     }
     public void Gameplay()
     {
@@ -30,6 +31,12 @@ class GamePlay
                 break;
             case MenuSelection.Exit:
                 Console.Clear();
+                string[] lines = File.ReadAllLines("Mensajes/Final.txt");
+                foreach (string line in lines)
+                {
+                    Console.WriteLine(line);
+                    Thread.Sleep(100);
+                }
                 break;
         }
     }
