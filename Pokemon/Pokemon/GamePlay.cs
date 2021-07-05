@@ -7,6 +7,8 @@ using System.Threading;
 
 class GamePlay
 {
+    private Player player;
+    
     enum MenuSelection { Start = 1, Exit, Error };
     public GamePlay()
     {
@@ -28,7 +30,9 @@ class GamePlay
         {
             case MenuSelection.Start:
                 Player player = new Player();
-                
+                Console.Clear();
+                Console.WriteLine("Bienvenido nuevo jugador, cual es tu nombre?");
+                string name = Console.ReadLine();
                 break;
             case MenuSelection.Exit:
                 Console.Clear();
