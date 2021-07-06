@@ -8,7 +8,10 @@ using System.Threading;
 class GamePlay
 {
     private Player player;
-    
+    private Battle battle;
+    private Enemy enemy;
+    public List<Enemy> enemies;
+
     enum MenuSelection { Start = 1, Exit, Error };
     public GamePlay()
     {
@@ -29,10 +32,20 @@ class GamePlay
         switch (menuSelection)
         {
             case MenuSelection.Start:
-                Player player = new Player();
                 Console.Clear();
-                Console.WriteLine("Bienvenido nuevo jugador, cual es tu nombre?");
-                string name = Console.ReadLine();
+                Console.WriteLine("Welcome new player, what's your name?");
+                Player player = new Player(Console.ReadLine());
+                Console.Clear();
+                Console.WriteLine("Get ready, " + player.name + ", the battles are about to begin!");
+                enemies = new List<Enemy>();
+                enemies.Add(new Enemy("Broke"));
+                enemies.Add(new Enemy("Misty"));
+                enemies.Add(new Enemy("Sabrina"));
+                foreach (Enemy line in enemies)
+                {
+                    Console.WriteLine(Enemy line);
+                }
+
                 break;
             case MenuSelection.Exit:
                 Console.Clear();

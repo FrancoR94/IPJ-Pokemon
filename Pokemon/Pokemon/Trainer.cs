@@ -3,20 +3,24 @@ using System.Collections.Generic;
 using System.Text;
 
 
-class Trainer
+/*class Trainer
 {
-    public Trainer()
+    
+    string name;
+    public List<Pokemon> pokemon;
+    public Trainer(string name, List<Pokemon> pokemon)
     {
-        string name;
-        List<Pokemon> pokemon;
+        this.name = name;
+        this.pokemon = pokemon;
+
     }
 }
 
 class Player : Trainer
 {
-    public Player()
+    public Player(string name) : base (name,pokemon)
     {
-
+        
     }
 }
 
@@ -116,4 +120,4 @@ class Enemy : Trainer
         return true;
     }
 }
-
+*/

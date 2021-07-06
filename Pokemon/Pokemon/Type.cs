@@ -2,12 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-
-class Battle
+namespace Pokemon
 {
-    public Battle(Player player, Enemy enemy)
+    class Types
     {
-
     }
 }
-
