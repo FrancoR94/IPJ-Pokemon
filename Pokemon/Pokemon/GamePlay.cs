@@ -41,11 +41,7 @@ class GamePlay
                 enemies.Add(new Enemy("Broke"));
                 enemies.Add(new Enemy("Misty"));
                 enemies.Add(new Enemy("Sabrina"));
-                foreach (Enemy line in enemies)
-                {
-                    Console.WriteLine(Enemy line);
-                }
-
+                Pokemon venasaur = ReadPokemonFile.ReadPokemonFromFile("Player/Venusaur.txt");
                 break;
             case MenuSelection.Exit:
                 Console.Clear();

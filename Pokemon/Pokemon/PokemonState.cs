@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Pokemon
+
+
+public abstract class PokemonState
 {
-    class PokemonState
-    {
-    }
+    public abstract Pokemon ApplyEffect(Pokemon affected);
 }
+
