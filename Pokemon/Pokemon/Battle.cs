@@ -31,13 +31,13 @@ class Battle
         Pokemon starmie = ReadPokemonFile.ReadPokemonFromFile("Entrenadores/Misty/Starmie.txt");
 
         Console.WriteLine("Your first fight is against the Gym Leader Misty");
+        Console.WriteLine("Your First Pokemon is...");
         bool pokemonLeft = true;
         do
         {
             if (venasaur.speed > blastoise.speed)
             {
                 playerTurn();
-                Console.Clear();
                 Console.WriteLine("Choose an attack pressing 1,2,3 or 4");
                 int input = Convert.ToInt32(Console.ReadLine());
                 switch(input)

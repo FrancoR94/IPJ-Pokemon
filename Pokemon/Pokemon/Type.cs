@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using static System.Console;
 
 public enum Tipo { Fuego, Agua, Planta, Normal, Veneno, Volador, Electrico, Fantasma, Bicho, Hielo, Psiquico, Roca, Tierra, Error }
 
@@ -40,7 +41,7 @@ public class Type
         }
         else
         {
-            Console.WriteLine("Error!");
+            WriteLine("Error!");
             return Tipo.Error;
         }
     }

@@ -52,6 +52,7 @@ class Menu
                 Player player = new Player(Console.ReadLine());
                 Console.Clear();
                 Console.WriteLine("Get ready, " + player.name + ", the battles are about to begin!");
+                Console.ReadLine();
                 Console.Clear();
                 break;
             case MenuSelection.Exit:
