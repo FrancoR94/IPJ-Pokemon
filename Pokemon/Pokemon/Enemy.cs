@@ -6,11 +6,12 @@ using System.Text;
 class Enemy
 {
     public string name;
-    public List<Pokemon> pokemon;
+ 
     public Enemy(string name)
     {
         this.name = name;
     }
+    
     /*public Enemy Misty()
     {
         return (Enemy)this.MemberwiseClone();
