@@ -30,7 +30,11 @@ class Battle
         Pokemon slowbro = ReadPokemonFile.ReadPokemonFromFile("Entrenadores/Misty/Slowbro.txt");
         Pokemon starmie = ReadPokemonFile.ReadPokemonFromFile("Entrenadores/Misty/Starmie.txt");
 
-        Console.WriteLine("Your first fight is against the Gym Leader Misty");
+        Console.WriteLine("Your first fight is against the Gym Leader Mistt \n");
+        Console.WriteLine("Her first Pokemon is...");
+        Blastoise();
+        Console.Read();
+        Console.Clear();
         Console.WriteLine("Your First Pokemon is...");
         bool pokemonLeft = true;
         do
@@ -38,18 +42,17 @@ class Battle
             if (venasaur.speed > blastoise.speed)
             {
                 playerTurn();
-                Console.WriteLine("Choose an attack pressing 1,2,3 or 4");
-                int input = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("\nChoose an attack by tapping it");
+                string input = Console.ReadLine();
                 switch(input)
                 {
-                    case 1:
-                        Console.WriteLine("Hola" + player.name);
+                    case "Latigo cepa":
+                        Pokemon caster = venasaur;
+                        Pokemon objective = blastoise;
+                        venasaur.BonifDamage(venasaur,blastoise);
                         break;
                 }
-                if (input==1)
-                {
-                    
-                }
+                
             }
             else
             {
@@ -76,9 +79,14 @@ class Battle
             Console.WriteLine(lines);
         }
     }
-    public void Damage(Pokemon venasaur)
+    
+    public void Blastoise()
     {
-        
+        string[] line = File.ReadAllLines("Entrenadores/Misty/Blastoise.txt");
+        foreach (string lines in line)
+        {
+            Console.WriteLine(lines);
+        }
     }
 }
 

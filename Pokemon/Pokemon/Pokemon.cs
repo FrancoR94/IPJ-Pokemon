@@ -31,7 +31,7 @@ public class Pokemon
         double efectivity = 1.2;
         Random random = new Random();
         random.Next(80, 101);
-        double damage = (0.01*bonif*efectivity*ToDouble(random)*((((0.2*caster.level+1)*caster.attack*movement.potencia)/(25*objective.defense))+2));
+        double damage = (0.01*bonif*efectivity*80*((((0.2*caster.level+1)*caster.attack*movement.potencia)/(25*objective.defense))+2));
     }
     /*public Pokemon(string name,int level, int life, int maxLife,int attack,int specialAttack,int defense,int specialDefense,int speed)
     {
